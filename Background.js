@@ -20,6 +20,7 @@ const styles = StyleSheet.create({
     right: 0,
     left: 0,
     bottom: 0,
+    zIdnex: -1,
   },
   mountain: {
     opacity: 0.5,
