@@ -22,14 +22,10 @@ export const Dreams = () => {
 const styles = StyleSheet.create({
   container: {
     flexGrow: 1,
-    justifyContent: 'center',
-  },
-  text: {
-    color: 'white',
+    width: '100%',
+    //justifyContent: 'center',
+    justifyContent: 'space-evenly',
+    alignItems: 'center',
     padding: '1em',
-    borderRadius: '10px',
-    fontWeight: 'bold',
-    fontSize: '2.5em',
-
   },
 });

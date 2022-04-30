@@ -13,9 +13,6 @@ export default function App() {
       <Background />
       <ForeGround>
         <Dreams />
-        <Text style={styles.text}>
-          Welcome to your dreams :)
-        </Text>
       </ForeGround>
       <StatusBar style="auto" />
     </View>
