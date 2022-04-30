@@ -1,7 +1,6 @@
 import { StyleSheet, Text, View } from 'react-native';
 import { Gradient } from './Gradient';
 import { Mountain } from './Mountain';
-
 import { colors } from './theme';
 
 export const Background = () => (

@@ -2,6 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import { Background } from './Background';
 import { ForeGround } from './ForeGround';
+import { Dreams } from './Dreams';
 
 import { colors } from './theme';
 
@@ -11,7 +12,7 @@ export default function App() {
 
       <Background />
       <ForeGround>
-
+        <Dreams />
         <Text style={styles.text}>
           Welcome to your dreams :)
         </Text>
