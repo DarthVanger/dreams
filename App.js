@@ -1,6 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import { Background } from './Background';
+import { ForeGround } from './ForeGround';
 
 import { colors } from './theme';
 
@@ -9,8 +10,12 @@ export default function App() {
     <View style={styles.container}>
 
       <Background />
+      <ForeGround>
 
-      <Text style={{color: 'white'}}>Open up App.js to start working on your app!</Text>
+        <Text style={styles.text}>
+          Welcome to your dreams :)
+        </Text>
+      </ForeGround>
       <StatusBar style="auto" />
     </View>
   );
@@ -20,5 +25,13 @@ const styles = StyleSheet.create({
   container: {
     flexGrow: 1,
     justifyContent: 'center',
+  },
+  text: {
+    color: 'white',
+    padding: '1em',
+    borderRadius: '10px',
+    fontWeight: 'bold',
+    fontSize: '2.5em',
+
   },
 });
