@@ -1,6 +1,5 @@
 import { StyleSheet, Text, View } from 'react-native';
 import { Gradient } from './Gradient';
-import { SvgBackground } from './SvgBackground';
 import { Mountain } from './Mountain';
 
 import { colors } from './theme';
