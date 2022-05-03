@@ -6,13 +6,15 @@ export const Dream = ({ dream }) => {
   return (
     <View style={styles.container}>
       <CardGradient />
-        {dream}
+      <Text style={styles.text}>{dream}</Text>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
+  },
+  text: {
     //width: '40%',
     //flexBasis: '40%',
     border: '2px solid pink',
@@ -26,5 +28,5 @@ const styles = StyleSheet.create({
     fontFamily: 'lucida grande',
     
     fontSize: '2em',
-  },
+  }
 });

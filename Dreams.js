@@ -3,18 +3,12 @@ import { loadDreams } from './storage';
 import { StyleSheet, Text, View } from 'react-native';
 import { Dream } from './Dream';
 
-export const Dreams = () => {
-  const [dreams, setDreams] = useState();
+export const Dreams = ({ dreams }) => {
+  console.log('dreams in Dreams: ', dreams);
 
-  useEffect(async () => {
-    const dreams = await loadDreams();
-    setDreams(dreams);
-  }, []);
-
-  console.log('dreams: ', dreams);
   return (
     <View style={styles.container}>
-      { dreams?.map(dream => <Dream dream={dream} />) }
+      { dreams?.map(dream => <Dream dream={dream} key={dream} />) }
     </View>
   );
 };
