@@ -3,6 +3,7 @@ import { StyleSheet, Text, View } from 'react-native';
 import { Background } from './Background';
 import { ForeGround } from './ForeGround';
 import { Dreams } from './Dreams';
+import { AddDream } from './AddDream';
 
 import { colors } from './theme';
 
@@ -13,6 +14,7 @@ export default function App() {
       <Background />
       <ForeGround>
         <Dreams />
+        <AddDream />
       </ForeGround>
       <StatusBar style="auto" />
     </View>
