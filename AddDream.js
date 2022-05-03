@@ -1,5 +1,6 @@
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 import { colors } from './theme';
+import Ionicons from '@expo/vector-icons/Ionicons';
 
 export const AddDream = ({ onPress }) => {
   return (
@@ -7,7 +8,9 @@ export const AddDream = ({ onPress }) => {
       style={styles.button}
       onPress={onPress}
     >
-      <Text style={styles.text}>+</Text>
+      <Text style={styles.text}>
+        <Ionicons name="add-circle-outline" size={72 + 24} style={styles.button} />
+      </Text>
     </TouchableOpacity>
   );
 };
@@ -15,18 +18,6 @@ export const AddDream = ({ onPress }) => {
 const styles = StyleSheet.create({
   button: {
     alignSelf: 'flex-end',
-    margin: '1rem',
-    padding: '2rem',
-    borderRadius: '50%',
-    backgroundColor: colors.primary.action,
-    width: '8rem',
-    height: '8rem',
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
+    color: colors.primary.action,
   },
-  text: {
-    fontSize: '5rem',
-    color: 'white',
-  }
 });

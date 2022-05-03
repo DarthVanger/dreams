@@ -1,4 +1,5 @@
 export const colors = {
+  opposite: '#0EAB91',
   primary: {
     action: '#E1578B',
     main: '#E75F82',
