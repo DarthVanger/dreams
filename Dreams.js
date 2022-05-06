@@ -8,7 +8,7 @@ export const Dreams = ({ dreams }) => {
 
   return (
     <View style={styles.container}>
-      { dreams?.map(dream => <Dream dream={dream} key={dream} />) }
+      { dreams?.map((dream, idx) => <Dream dream={dream} key={dream + idx} />) }
     </View>
   );
 };
