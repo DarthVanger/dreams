@@ -1,23 +1,27 @@
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 import { colors } from './theme';
-import Ionicons from '@expo/vector-icons/Ionicons';
+import { PlusIcon } from './PlusIcon';
 
 export const AddDream = ({ onPress }) => {
   return (
     <TouchableOpacity
-      style={styles.button}
+      style={styles.container}
       onPress={onPress}
     >
       <Text style={styles.text}>
-        <Ionicons name="add-circle-outline" size={72 + 24} style={styles.button} />
+        <PlusIcon style={styles.button} />
       </Text>
     </TouchableOpacity>
   );
 };
 
 const styles = StyleSheet.create({
+  container: {
+    position: 'absolute',
+    bottom: 0,
+    right: 0,
+  },
   button: {
-    alignSelf: 'flex-end',
     color: colors.primary.action,
   },
 });

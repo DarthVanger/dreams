@@ -7,6 +7,7 @@ export const colors = {
     dark: '#6B5091',
   },
   secondary: {
+    action: 'white',
     main: '#2A4088',
     dark: '#0B2D66',
     light: '#47649F',
