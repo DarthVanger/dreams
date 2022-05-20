@@ -31,12 +31,11 @@ export default function App() {
   };
 
   const handleDreamChange = (dream) => {
-   console.log('HANDLE DREAM dream: ', dream);
     const updatedDreams = dreams.map(item => {
       if (item.id === dream.id) {
         return {
           ...item,
-          dream,
+          ...dream,
         };
       } else {
         return item;
