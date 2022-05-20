@@ -3,12 +3,20 @@ import { loadDreams } from './storage';
 import { StyleSheet, Text, View } from 'react-native';
 import { Dream } from './Dream';
 
-export const Dreams = ({ dreams }) => {
+export const Dreams = ({ dreams, onDreamChange }) => {
   console.log('dreams in Dreams: ', dreams);
+
+  const DreamsList = () => dreams?.map(dream => (
+    <Dream
+      dream={dream}
+      key={dream.id}
+      onChange={() => { console.log('on dream change '); onDreamChange(dream)}}
+    />
+  ));
 
   return (
     <View style={styles.container}>
-      { dreams?.map((dream, idx) => <Dream dream={dream} key={dream + idx} />) }
+      <DreamsList />
     </View>
   );
 };

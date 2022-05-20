@@ -1,9 +1,10 @@
 import { StyleSheet, Text, TextInput, View } from 'react-native';
 import { CardGradient } from './CardGradient';
 
-export const Dream = ({ dream }) => {
+export const Dream = ({ dream, onChange }) => {
   const handleChange = (event) => {
-   
+    dream.text = event.target.value;
+    onChange(dream);
   };
 
   return (
@@ -11,8 +12,9 @@ export const Dream = ({ dream }) => {
       <CardGradient />
       <TextInput
         style={styles.text}
-        value={dream}
+        value={dream.text}
         onChange={handleChange}
+        autoFocus
       />
     </View>
   );

@@ -19,11 +19,32 @@ export default function App() {
   }, []);
 
   const handleAddButtonPress = () => {
-    console.log('dreams in button', dreams);
     const newDreams = [...dreams];
-    newDreams.push('New Dream');
+    newDreams.push({
+      id: dreams.length + 1,
+      text: 'New Dream',
+      dateCreated: (new Date()).toISOString(),
+    });
+
     setDreams(newDreams);
     saveDreams(newDreams);
+  };
+
+  const handleDreamChange = (dream) => {
+   console.log('HANDLE DREAM dream: ', dream);
+    const updatedDreams = dreams.map(item => {
+      if (item.id === dream.id) {
+        return {
+          ...item,
+          dream,
+        };
+      } else {
+        return item;
+      }
+    });
+
+    setDreams(updatedDreams);
+    saveDreams(updatedDreams);
   };
 
   return (
@@ -31,7 +52,7 @@ export default function App() {
 
       <Background />
       <ForeGround>
-        <Dreams dreams={dreams} />
+        <Dreams dreams={dreams} onDreamChange={handleDreamChange} />
         <AddDream onPress={handleAddButtonPress} />
       </ForeGround>
       <StatusBar style="auto" />
