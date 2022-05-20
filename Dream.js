@@ -1,12 +1,19 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, TextInput, View } from 'react-native';
 import { CardGradient } from './CardGradient';
 
 export const Dream = ({ dream }) => {
-  console.log('dream: ', dream);
+  const handleChange = (event) => {
+   
+  };
+
   return (
     <View style={styles.container}>
       <CardGradient />
-      <Text style={styles.text}>{dream}</Text>
+      <TextInput
+        style={styles.text}
+        value={dream}
+        onChange={handleChange}
+      />
     </View>
   );
 };
@@ -26,7 +33,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     letterSpacing: '2px',
     fontFamily: 'lucida grande',
-    
     fontSize: '2em',
+    width: '100%',
   }
 });

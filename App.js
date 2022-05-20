@@ -15,7 +15,6 @@ export default function App() {
 
   useEffect(async () => {
     const savedDreams = await loadDreams();
-    console.log('savedDreams: ', savedDreams);
     setDreams(savedDreams);
   }, []);
 
